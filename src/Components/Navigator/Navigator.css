@@ -1,0 +1,78 @@
+.navigator{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #151515;
+    border: 5px solid #A91D3A;
+    box-shadow: 0 0 30px red;
+    align-items: center;
+    color: #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1111111;
+}
+.navigator h2{
+    color: white;
+    padding: 15px;
+}
+.navigator span{
+    color: red;
+}
+.navigator .menu-icon{
+    display: none;
+    font-size: 2rem;
+    margin-right: 15px;
+    color: white;
+    cursor: pointer;
+}
+ul{
+    transition: 0.5s;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 25px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    /* border: 2px solid rgb(0, 0, 0); */
+
+}
+/* ul li:hover{
+    border: 2px solid white;
+    
+} */
+ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+ul li a:hover{
+    color: tomato;
+}
+@media(max-width:768px){
+    ul li{
+        margin-right: 13px;
+    }
+}
+@media(max-width:505px){
+    ul{
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background-color: #151515;
+        border: 5px solid #A91D3A;
+        box-shadow: 0 0 30px red;
+    }
+    ul li{
+        display: flex;
+        margin: 15px 70px 15px 15px;
+    }
+    .navigator .menu-icon{
+        display: flex;
+    }
+    .hide-mobile-menu{
+        right: -300px;
+    }
+}

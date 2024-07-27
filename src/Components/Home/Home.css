@@ -1,0 +1,266 @@
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.150);
+    position: absolute;
+    left:3%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+.image{
+    /*Floating*/
+    animation-name: floating;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    display: inline-block;
+    margin-top: 50px;
+    height: 400px;
+    background-color: #6b2f2f;
+    border: 5px solid #aa1230;
+    box-shadow: 0 0 30px red;
+    border-radius: 50%;
+    z-index: 2;
+}
+.image img{
+    /*Undragable*/
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+.info{
+    margin-top: 60px;
+    text-align: end;
+    color: #FFEDD8;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+    }
+    h3{
+        font-size: 2rem;
+        margin-bottom: 7px;
+        color: #A91D3A;
+    }
+    p{
+        margin-bottom: 5px;
+    }
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+.info .name{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    padding-right: 5px;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+.social a{
+    color: #FFEDD8;
+}
+.social :hover{
+    color: #EEEE;
+}
+.social .icon{
+    font-size: 2.3rem;
+}
+.social .s{
+        margin-right: 20px;
+}
+/*Responsive*/
+@media(max-width:1176px){
+    .title{
+        font-size: 5.8rem;
+    }
+    .image{
+        height: 380px;
+    }
+    .info{
+        h1{
+            font-size: 3rem;
+            margin-bottom: 8px;
+        }
+        h3{
+            font-size: 1.7rem;
+            margin-bottom: 7px;
+        }
+        p{
+            font-size: .9rem;
+        }
+
+    }
+    .social .icon{
+        font-size: 2rem;
+    }
+}
+@media(max-width:1000px){
+    .title{
+        font-size: 5.5rem;
+    }
+    .image{
+        height: 370px;
+    }
+    .info{
+        h1{
+            font-size: 2.7rem;
+            margin-bottom: 8px;
+        }
+        h3{
+            font-size: 1.5rem;
+            margin-bottom: 7px;
+        }
+        p{
+            font-size: .7rem;
+        }
+
+    }
+    .social .icon{
+        font-size: 1.7rem;
+    }
+}
+@media(max-width:951px){
+    .info{
+        h1{
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+        }
+    }
+    .image{
+        height: 350px;
+    }
+}
+@media(max-width:789px){
+    .title{
+        font-size: 4rem;
+    }
+    .image{
+        height: 280px;
+    }
+    .info{
+        h1{
+            font-size: 2.3rem;
+            margin-bottom: 4px;
+        }
+        h3{
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: .7rem;
+        }
+
+    }
+    .social .icon{
+        font-size: 1.7rem;
+    }
+}
+@media(max-width:699px){
+    .home{
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: start
+    }
+    .title{
+        font-size: 3rem;
+        top: 270px;
+    }
+    .image{
+        height: 240px;
+        margin-bottom: 45px;
+        margin-left: 140px;
+    }
+    .info{
+        position: absolute;
+        top: 0;
+        margin-left: 15px;
+        text-align: start;
+        h1{
+            font-size: 2.2rem;
+            margin-bottom: 0;            
+            .hi{
+                display: block;
+            }
+        }
+        h3{
+            font-size: 1.2rem;
+            margin-bottom: 0px;
+        }
+        p{
+            font-size: .7rem;
+        }
+
+    }
+    .social{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .social .icon{
+        font-size: 2.5rem;
+        margin-top: 40px;
+        margin-left: 35px;
+    }
+}
+@media(max-width:376px){
+    .image{
+        margin-left: 110px;
+    }
+    .social .icon{
+        margin-left: 25px;
+    }
+}
+@media(max-width:334px){
+    .info{
+        h1{
+            font-size: 1.8rem;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        p{
+            font-size: .6rem;
+            margin-bottom: 30px;
+        }
+    }
+    .image{
+        height: 210px;
+        margin-bottom: 70px;
+        margin-left: 80px;
+    }
+    .social .icon{
+        font-size: 2.5rem;
+        margin-top: 35px;
+        margin-left: 5px;
+    }
+}
